@@ -13,7 +13,7 @@ This is a paragraph. Add an empty line to start a new paragraph.
 
 Font can be *Italic* or **Bold**.
 
-Code can be highlighted with 'backticks'.
+Code can be highlighted with `backticks`.
 
 Hyperlinks look like this: [GitHub Help](https://help.github.com/).
 
