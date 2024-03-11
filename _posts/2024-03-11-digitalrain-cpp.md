@@ -1,15 +1,15 @@
 ---
 layout: post
-title: A Project in Modern C++
+title: Digital Rain Project in C++
 tags: cpp coding project
 categories: demo
 ---
 
-This is my first paragraph...
+This project was part of my C++ Programming module in my final year of college
 
-## This is a Heading
+## Overview
 
-This is a paragraph. Add an empty line to start a new paragraph.
+This project involved a lot of algorithmic thinking to produce a Digital Rain effect that could also be seen in the movie [The Matrix](https://en.wikipedia.org/wiki/The_Matrix).
 
 Font can be *Italic* or **Bold**.
 
