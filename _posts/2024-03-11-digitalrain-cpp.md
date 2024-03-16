@@ -26,6 +26,7 @@ This project involved a lot of algorithmic thinking to produce a Digital Rain ef
 <summary>Click to expand: <code>.h file</code></summary>
 
 ```
+
 #ifndef DIGITAL_RAIN_H
 #define DIGITAL_RAIN_H
 
@@ -53,6 +54,7 @@ private:
 };
 
 #endif // DIGITAL_RAIN_H
+
 ```
 
 </details>
