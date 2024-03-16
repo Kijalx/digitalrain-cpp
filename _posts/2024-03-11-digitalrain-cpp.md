@@ -17,7 +17,58 @@ This project involved a lot of algorithmic thinking to produce a Digital Rain ef
 
 <img src="https://raw.githubusercontent.com/kijalx/digitalrain-cpp/main/docs/assets/images/DigitalRain.gif" width="864" height="864">
 
+
+## Code Snippets
+### .h file
+
+```
+#ifndef DIGITAL_RAIN_H
+#define DIGITAL_RAIN_H
+
+#include <vector>
+#include <random>
+
+class DigitalRain {
+public:
+    DigitalRain(int w, int h);
+    void init();
+    void update();
+    void display();
+    void setWidth(int w);
+    void setHeight(int h);
+    void setColour(int c);
+
+private:
+    int width, height, effectMode, colour, speed;
+    std::vector<std::vector<char>> matrix;
+    std::vector<int> dropletPositions; // Current position (y-coordinate) of the head of each droplet
+    std::vector<int> dropletLengths; // Length of each droplet
+    std::vector<bool> dropletActive; // Indicates whether each droplet is active
+    static std::default_random_engine engine;
+    static std::uniform_int_distribution<int> uniform_dist;
+};
+
+#endif // DIGITAL_RAIN_H
+```
+### Constructor
+
+```
+DigitalRain::DigitalRain(int w, int h) : width(w), height(h) {
+    matrix.resize(height, std::vector<char>(width, ' '));
+    dropletPositions.resize(width, -1);
+    dropletLengths.resize(width);
+    dropletActive.resize(width, false);
+    for (int i = 0; i < width; ++i) {
+        dropletLengths[i] = uniform_dist(engine) % (height / 4) + 1;
+    }
+}
+```
+
+- **Matrix:** This i resize for the basic outline of where the droplets are allowed to be positioned which allows me to never let them go out of bounds.
+- **Droplet Position, Length, Active:** These are all resized to allow for the length and position to be changed. The activity status allows me to see if the droplet is going out of bounds and instantly kill it once it does.
 Font can be *Italic* or **Bold**.
+- **Droplet Length Assignmen:** I then assign random lengths to the droplets with a maximum height of 4
+
 
 
 Code can be highlighted with `backticks`.
