@@ -160,11 +160,11 @@ void DigitalRain::update() {
        - For each column, the code checks if a droplet is active. if it is, the code clears the droplets current trail from the console and replaces the characters with its previous position with spaces.
        - The droplets vertical position is incremented, which gives the feel of the droplet moving down the screen.
        - If the droplet reaches the bottom of the screen, It is deactivated and moved to the top. If it does not reach the bottom, it is updated with random characters to keep the rain effect.
-    - B. **Bounds Checking and Reactivation:**
-      - After the droplet moves, the code checks if it has moved past the bottom of the display area if so the droplet gets reset to a position of -1 so it is not visible and then is marked as active which then it gets incremented as if it was falling down again.
-      - However if the droplet is not active there is a chance it will be activated each time the update function runs. This is a randomness feature i implemented so not each column has a raindrop. This is to to represent the randomness of a new droplet beginning its decent.
-    - C. **Trail Management:**
-      - Active droplets leave behind a predetermined trail as they fall. This is shown by characters above the droplets position. As the the droplets position increases the trail gets updated to be the same no matter where the droplet is at the trail will remain the same.
-    - D. **Reactivation:**
-      - Inactive droplets remain inactive until the randomness feature of the activation of droplets occurs. The droplet remains inactive ensuring the rainfall is not uniform but instead a varied and natural.
+     - B. **Bounds Checking and Reactivation:**
+       - After the droplet moves, the code checks if it has moved past the bottom of the display area if so the droplet gets reset to a position of -1 so it is not visible and then is marked as active which then it gets incremented as if it was falling down again.
+       - However if the droplet is not active there is a chance it will be activated each time the update function runs. This is a randomness feature i implemented so not each column has a raindrop. This is to to represent the randomness of a new droplet beginning its decent.
+     - C. **Trail Management:**
+       - Active droplets leave behind a predetermined trail as they fall. This is shown by characters above the droplets position. As the the droplets position increases the trail gets updated to be the same no matter where the droplet is at the trail will remain the same.
+     - D. **Reactivation:**
+       - Inactive droplets remain inactive until the randomness feature of the activation of droplets occurs. The droplet remains inactive ensuring the rainfall is not uniform but instead a varied and natural.
 3.
