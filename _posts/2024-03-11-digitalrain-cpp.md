@@ -25,4 +25,4 @@ A bullet list:
 
 You can add an impage that has been uploaded to the repository in a /docs/assets/images folder.
 
-<img src="https://raw.githubusercontent.com/kijalx/digitalrain-cpp/main/docs/assets/images/DigitalRain.gif" width="700" height="300">
+<img src="https://raw.githubusercontent.com/kijalx/digitalrain-cpp/main/docs/assets/images/DigitalRain.gif" width="864" height="864">
