@@ -167,4 +167,23 @@ void DigitalRain::update() {
        - Active droplets leave behind a predetermined trail as they fall. This is shown by characters above the droplets position. As the the droplets position increases the trail gets updated to be the same no matter where the droplet is at the trail will remain the same.
      - D. **Reactivation:**
        - Inactive droplets remain inactive until the randomness feature of the activation of droplets occurs. The droplet remains inactive ensuring the rainfall is not uniform but instead a varied and natural.
-3.
+3. **Preformance Consideration:**
+   - The way this project is implemented wasnt a preformance based project but a more aestetic and pleasing to look at. Therefore it is intensive for the case of larger matrices. It is designed to efficiently manage the digital rain's appearance by only updating necessary parts of the screen and droplets. This was also a test in algorithmic thinking as setting cursor positions would of been more managable and less intensive then matrices.
+  
+### Displaying
+```cpp
+void DigitalRain::display() {
+    for (const auto& row : matrix) {
+        for (const auto& ch : row) {
+            std::cout << (ch);
+        }
+        std::cout << std::endl;
+    }
+}
+```
+1. **Iterating through the matrix:**
+   - This method begins by looping through each row of the matrix which is a 2d vector as mentioned in the .h file.
+   - Inside the loop then each character 'ch' in the current row is displayed by a nested loop.
+2. **Displaying Characters:**
+   - This nested for loop prints each individual character of the matrix.
+   - Then after one loop of the row is done it then goes onto the next line and repeats.
