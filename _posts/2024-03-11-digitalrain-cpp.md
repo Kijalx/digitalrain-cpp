@@ -114,3 +114,44 @@ void DigitalRain::init() {
     }
 }
 ```
+1. **User Input:** User inputs their preferred colour and speed which is then set inside the function and in setColour
+2. **Initialising Droplet Positions and activity:** Here im setting positions in according to the width and height of the matrix the position height is random where the droplets start so they dont all start at the top, Im also setting all these droplets to be active.
+3. **Console Properties:** Im setting the cursor of the console to be invisible.
+4. **Animation Loop:** I am calling my loop to start the droplet rainfall.
+
+### Updating
+```cpp
+void DigitalRain::update() {
+    gotoXY(0, 0);
+    for (int j = 0; j < width; ++j) {
+        if (dropletActive[j]) {
+            int startPos = dropletPositions[j] - dropletLengths[j] + 1;
+            for (int k = startPos; k <= dropletPositions[j]; ++k) {
+                if (k >= 0 && k < height) {
+                    matrix[k][j] = ' ';
+                }
+            }
+            dropletPositions[j]++;
+            if (dropletPositions[j] - dropletLengths[j] >= height) {
+                dropletPositions[j] = -1;
+                dropletActive[j] = false;
+            }
+            else {
+                startPos = dropletPositions[j] - dropletLengths[j] + 1;
+                for (int k = startPos; k <= dropletPositions[j]; ++k) {
+                    if (k >= 0 && k < height) {
+                        matrix[k][j] = static_cast<char>(uniform_dist(engine));
+                    }
+                }
+            }
+        }
+        if (!dropletActive[j] && (uniform_dist(engine) % 100) < 10) {
+            dropletPositions[j] = 0;
+            dropletLengths[j] = uniform_dist(engine) % (height / 4) + 1;
+            dropletActive[j] = true;
+        }
+    }
+}
+```
+1. **Cursor Position:** Each time this loop gets called i want my cursor to reset.
+2. **Updating Droplets:**
