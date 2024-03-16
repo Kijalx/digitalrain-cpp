@@ -58,7 +58,9 @@ private:
 </details>
 
 ### Constructor
+
 <details>
+
 <summary>Click to expand: <code>void DigitalRain::DigitalRain()</code> method</summary>
 
 ```cpp
@@ -82,6 +84,7 @@ DigitalRain::DigitalRain(int w, int h) : width(w), height(h) {
 
 ### Setting Colour
 <details>
+    
 <summary>Click to expand: <code>void DigitalRain::init()</code> method</summary>
 
 ```
@@ -100,12 +103,15 @@ void DigitalRain::setColour(int c) {
     system(colorCommand.c_str());
 }
 ```
+
 </details>
 
 **Setting Colour:** Here i have a switch statement with whatever the user chooses the string will execute Color + choice. This allows the user to change colour according to their prefrence.
 
 ### Initialisation
+
 <details>
+
 <summary>Click to expand: <code>void DigitalRain::init()</code> method</summary>
 
 ```cpp
@@ -135,6 +141,7 @@ void DigitalRain::init() {
     }
 }
 ```
+
 </details>
 
 Code can be highlighted with `backticks`.
