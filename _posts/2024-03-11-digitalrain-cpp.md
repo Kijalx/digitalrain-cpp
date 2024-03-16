@@ -20,6 +20,11 @@ This project involved a lot of algorithmic thinking to produce a Digital Rain ef
 
 ## Code Snippets
 ### .h file
+
+<details>
+
+<summary>Click to expand: <code>.h file</code></summary>
+
 ```
 #ifndef DIGITAL_RAIN_H
 #define DIGITAL_RAIN_H
@@ -50,6 +55,8 @@ private:
 #endif // DIGITAL_RAIN_H
 ```
 
+</details>
+
 ### Constructor
 <details>
 <summary>Click to expand: <code>void DigitalRain::DigitalRain()</code> method</summary>
@@ -65,6 +72,7 @@ DigitalRain::DigitalRain(int w, int h) : width(w), height(h) {
     }
 }
 ```
+
 </details>
 
 - **Matrix:** This i resize for the basic outline of where the droplets are allowed to be positioned which allows me to never let them go out of bounds.
