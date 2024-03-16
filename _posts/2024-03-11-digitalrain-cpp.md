@@ -25,7 +25,7 @@ This project involved a lot of algorithmic thinking to produce a Digital Rain ef
 
 <summary>Click to expand: <code>.h file</code></summary>
 
-```
+```cpp
 
 #ifndef DIGITAL_RAIN_H
 #define DIGITAL_RAIN_H
@@ -89,7 +89,8 @@ DigitalRain::DigitalRain(int w, int h) : width(w), height(h) {
     
 <summary>Click to expand: <code>void DigitalRain::init()</code> method</summary>
 
-```
+```cpp
+
 void DigitalRain::setColour(int c) {
     std::string colorCommand = "Color ";
     switch (c) {
@@ -104,6 +105,7 @@ void DigitalRain::setColour(int c) {
     }
     system(colorCommand.c_str());
 }
+
 ```
 
 </details>
@@ -145,12 +147,4 @@ void DigitalRain::init() {
 ```
 
 </details>
-
-Code can be highlighted with `backticks`.
-
-Font can be *Italic* or **Bold**.
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-You can add an impage that has been uploaded to the repository in a /docs/assets/images folder.
-
 
